@@ -33,5 +33,5 @@ def pruebas():
 
 if __name__ == "__main__":
     pruebas()
-# Corrección de operadores y validaciones
+# Corrección de operadores y validaciones.
 
