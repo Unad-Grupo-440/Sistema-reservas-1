@@ -1,12 +1,10 @@
-class ServicioNoDisponibleError(Exception):
+
+class DatosInvalidos(Exception):
     pass
 
-class CapacidadExcedidaError(Exception):
-    pass
 
-class EquipoNoDisponibleError(Exception):
+class ServicioNoDisponible(Exception):
     pass
+``
 
-class DatosInvalidosError(Exception):
-    pass
 # Corrección de operadores y validaciones
