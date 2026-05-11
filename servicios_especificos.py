@@ -232,4 +232,5 @@ class ServicioComplementario(Servicio):
         return (
             f"Servicio: {self.servicio} | "
             f"Horas: {self.cantidad_horas}")
+        # Corrección de operadores y validaciones
         
