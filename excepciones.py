@@ -9,3 +9,4 @@ class EquipoNoDisponibleError(Exception):
 
 class DatosInvalidosError(Exception):
     pass
+# Corrección de operadores y validaciones
