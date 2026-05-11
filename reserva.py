@@ -30,6 +30,8 @@ class Reserva:
             self.estado = "Cancelada"
             print("⚠️ Reserva cancelada")
 
+        # Corrección de operadores y validaciones
+
         except Exception as e:
             print("❌ Error:", e)
             self.guardar_log(e)
