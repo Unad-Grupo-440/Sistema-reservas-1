@@ -124,5 +124,7 @@ if __name__ == "__main__":
         print(f"Error inesperado: {e}")
     finally:
         print("Programa finalizado.")
+
+# Corrección de operadores y validaciones
                                   
 
