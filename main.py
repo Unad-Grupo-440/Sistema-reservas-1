@@ -1,4 +1,4 @@
-from servicios import ReservaSala, AlquilerEquipo, Asesoria, ServicioComplementario
+from servicios_especificos import *
 
 def pruebas():
     print("=== PRUEBAS DEL SISTEMA ===\n")
