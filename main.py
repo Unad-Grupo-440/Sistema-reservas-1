@@ -1,89 +1,37 @@
-# from servicios_especificos import *
-import logging
+from servicios_especificos import *
+
+def pruebas():
+    print("=== PRUEBAS DEL SISTEMA ===\n")
+
+    try:
+        # PRUEBA RESERVA SALA
+        reserva = ReservaSala(2, "vip")
+        print(reserva.descripcion())
+        print("Costo:", reserva.calcular_costo())
+        print("\n-----------------\n")
+
+        # PRUEBA ALQUILER EQUIPO
+        equipo = AlquilerEquipo("video beam", 3)
+        print(equipo.descripcion())
+        print("Costo:", equipo.calcular_costo())
+        print("\n-----------------\n")
+
+        # PRUEBA ASESORIA
+        asesoria = Asesoria("intermedio", 2)
+        print(asesoria.descripcion())
+        print("Costo:", asesoria.calcular_costo())
+        print("\n-----------------\n")
+
+        # PRUEBA SERVICIO COMPLEMENTARIO
+        servicio = ServicioComplementario("parqueadero", 5)
+        print(servicio.descripcion())
+        print("Costo:", servicio.calcular_costo())
+
+    except Exception as e:
+        print("Error:", e)
 
 
-# ======================================================
-# PRUEBA RESERVA DE SALA
-# ======================================================
+if __name__ == "__main__":
+    pruebas()
+# Corrección de operadores y validaciones.
 
-try:
-
-    sala1 = ReservaSala(
-        "Sala Ejecutiva",
-        100000,
-        20,
-        disponible=True,
-        aire_acondicionado=True,
-        internet=True,
-        videobeam=True
-    )
-
-    print(sala1.descripcion())
-
-    sala1.validar_disponibilidad()
-
-    print("Costo:",
-          sala1.calcular_costo(3))
-
-except Exception as e:
-
-    logging.error(e)
-
-    print("Error:", e)
-
-
-print("\n========================\n")
-
-
-# ======================================================
-# PRUEBA ALQUILER EQUIPO
-# ======================================================
-
-try:
-
-    equipo1 = AlquilerEquipo(
-        "Video Beam Epson",
-        50000,
-        "Proyector",
-        2
-    )
-
-    equipo1.validar_disponibilidad(5)
-
-except Exception as e:
-
-    logging.error(e)
-
-    print("Error:", e)
-
-
-print("\n========================\n")
-
-
-# ======================================================
-# PRUEBA ASESORIA
-# ======================================================
-
-try:
-
-    asesoria1 = Asesoria(
-        "Consultoría TI",
-        80000,
-        "Ciberseguridad",
-        experto_certificado=True
-    )
-
-    asesoria1.validar_disponibilidad()
-
-    print(asesoria1.descripcion())
-
-    print(
-        "Costo:",
-        asesoria1.calcular_costo(6)
-    )
-
-except Exception as e:
-
-    logging.error(e)
-
-    print("Error:", e)
