@@ -71,3 +71,5 @@ for servicio in servicios:
     print(servicio.descripcion())
     print("Costo:", servicio.calcular_costo())
     print("------")
+
+Corrección de operadores y validaciones
